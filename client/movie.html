@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="movie_style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+    <header>
+        <a href="javascript:history.back()" class="back"><i class="ri-arrow-go-back-line back-icon"></i> Back</a>
+    </header>
+    <div class="movie-details">
+        <div id="video-container" class="video-container"></div>
+        <div class="info-section" id="info-section">
+            <h1 id="movie-title"></h1>
+            <p id="movie-overview"></p><hr>
+            <p id="movie-rating"></p><hr>
+            <p id="movie-director"></p><hr>
+            <p id="movie-stars"></p>
+        </div>
+    </div>
+    <div id="recommendation-container">
+        <h1>Recommended Movies</h1><hr><br>
+    </div>
+    <script src="movie.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie List</title>
+    <link rel="stylesheet" href="genre_style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="back"><i class="ri-arrow-go-back-line back-icon"></i> Back</div>
+        </a>
+        <div class="right-widgets">
+            <div class="searchbar-container">
+                <i class="ri-search-line search-icon"></i>
+                <input type="text" , id="searchbar-text" , placeholder="Search Movie Names">
+            </div>
+            <div class="rating-container">
+                <i class="ri-star-fill rating-icon"></i>
+                <input type="number" , id="rating-text" , placeholder="Minimum Rating 8.0">
+            </div>
+            <div class="year-container">
+                <input type="number" , id="year-text" , placeholder="Maximum year 2019">
+            </div>
+        </div>
+    </header>
+    <h1 id="genre-title">loading.....</h1>
+    <div id="movie-container" class="tile-container"></div>
+    <script src="genre.js"></script>
+</body>
+
+</html>
