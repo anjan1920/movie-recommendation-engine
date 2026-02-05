@@ -191,11 +191,9 @@ frontend/pages/index.html
 
 ---
 
-## 🧑‍💻 Author Anjan Das 
-##Connect with me on [LinkedIn](https://www.linkedin.com)](https://www.linkedin.com/in/anjan-das-22b278236/)
+## 🧑‍💻 Author  
+**Anjan Das**
 
-Built as a full-stack machine learning + web systems project combining **recommendation algorithms** with **real web architecture**.
+## 🔗 Connect with me  
+[LinkedIn](https://www.linkedin.com/in/anjan-das-22b278236/)
 
-
-
-Just say.
