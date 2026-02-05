@@ -124,7 +124,7 @@ backend/
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/anjan1920/movie-recommendation-engine
 cd movie-recommendation-engine
 ```
 
