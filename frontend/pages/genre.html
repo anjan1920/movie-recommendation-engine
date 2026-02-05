@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie List</title>
+
+  <!-- Tailwind -->
+  <link rel="stylesheet" href="../src/output.css" />
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body class="min-h-screen bg-[#222] text-white font-['Segoe_UI',sans-serif] pt-24 px-5">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full bg-[#222] px-5 py-4
+                 flex items-center justify-between z-10">
+
+    <a href="index.html">
+      <div class="flex items-center gap-2
+                  bg-[#333] px-4 py-2 rounded-full
+                  hover:bg-[#444] transition">
+        <i class="ri-arrow-go-back-line text-lg"></i>
+        <span>Back</span>
+      </div>
+    </a>
+
+    <!-- Right Widgets -->
+    <div class="flex gap-4">
+
+      <!-- Search -->
+      <div class="flex items-center bg-[#333] px-4 py-2 rounded-full">
+        <i class="ri-search-line text-2xl"></i>
+        <input
+          id="searchbar-text"
+          type="text"
+          placeholder="Search Movie Names"
+          class="bg-transparent outline-none text-white
+                 px-3 text-lg placeholder-gray-400"
+        />
+      </div>
+
+      <!-- Rating -->
+      <div class="flex items-center bg-[#333] px-4 py-2 rounded-full w-44">
+        <i class="ri-star-fill text-orange-400 text-xl"></i>
+        <input
+          id="rating-text"
+          type="number"
+          placeholder="Min Rating 8.0"
+          class="bg-transparent outline-none text-white
+                 px-3 w-full"
+        />
+      </div>
+
+      <!-- Year -->
+      <div class="flex items-center bg-[#333] px-4 py-2 rounded-full w-44">
+        <input
+          id="year-text"
+          type="number"
+          placeholder="Max Year 2019"
+          class="bg-transparent outline-none text-white w-full"
+        />
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Title -->
+  <h1 id="genre-title" class="text-3xl font-bold mb-6">
+    loading.....
+  </h1>
+
+  <!-- Movie Grid -->
+  <div
+    id="movie-container"
+    class="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))]
+           gap-5 ">
+  </div>
+
+  <!-- JS (module later) -->
+  <script type="module" src="../js/genre.js"></script>
+</body>
+</html>

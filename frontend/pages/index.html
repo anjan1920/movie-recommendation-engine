@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Dashboard</title>
+
+  <!-- Tailwind output -->
+  <link rel="stylesheet" href="../src/output.css" />
+
+  <!-- PapaParse (unchanged) -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+
+<body class="min-h-screen bg-[#111] text-white font-['Segoe_UI',sans-serif] p-5 overflow-hidden">
+
+  <!-- Welcome Widget -->
+  <div
+    id="welcome-widget"
+    class="fixed -top-24 left-1/2 -translate-x-1/2
+           bg-green-500 text-white
+           px-8 py-4 rounded-full
+           text-lg font-bold
+           transition-all duration-500 ease-in-out
+           z-[9999]">
+    Welcome <span id="username-holder"></span>
+  </div>
+
+  <!-- Heading -->
+  <h1 class="text-3xl font-bold text-center mb-6">
+    Browse by Genre
+  </h1>
+
+  <!-- Genre Tiles Container -->
+  <div
+    id="genre-container"
+    class="flex flex-wrap justify-center gap-4 p-4
+         h-[calc(100vh-120px)] overflow-y-auto">
+  </div>
+
+  <!-- Script -->
+  <script src="../js/home.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/user.js"></script>
+</body>
+</html>
