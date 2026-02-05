@@ -91,7 +91,7 @@ backend/
 │   └── validator.py
 │
 ├── config.py
-└── server.py
+
 ```
 
 ---
