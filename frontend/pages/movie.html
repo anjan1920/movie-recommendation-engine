@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Details</title>
+
+  <!-- Tailwind -->
+  <link rel="stylesheet" href="../src/output.css" />
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body class="min-h-screen bg-[#111] text-white font-['Segoe_UI',sans-serif]">
+
+  <!-- Header -->
+  <header class="px-6 py-4">
+    <a href="javascript:history.back()"
+       class="inline-flex items-center gap-2 bg-[#222] px-4 py-2 rounded-full
+              hover:bg-[#333] transition">
+      <i class="ri-arrow-go-back-line"></i>
+      Back
+    </a>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-6xl mx-auto px-6 py-8">
+
+    <!-- Movie Section -->
+   <div class="grid grid-cols-1 md:grid-cols-[220px_1fr_1fr] gap-8">
+
+
+
+
+
+      <!-- Poster -->
+      <img
+        id="movie-poster"
+        class="w-full  rounded-2xl shadow-lg"
+        alt="Movie Poster"
+        draggable="false"
+      />
+
+      <!-- Info -->
+      <div class="md:col-span-2 space-y-4">
+
+        <h1 id="movie-title" class="text-3xl font-bold"></h1>
+
+        <p id="movie-overview" class="text-gray-300 leading-relaxed"></p>
+
+        <div class="text-sm text-gray-400 flex gap-4">
+          <span id="movie-rating"></span>
+          <span id="movie-year">Year:</span>
+        </div>
+
+        <p id="movie-director"></p>
+        <p id="movie-stars"></p>
+
+        <!-- Genres -->
+        <div id="genres-container" class="flex flex-wrap gap-2"></div>
+
+        <!-- Like Button -->
+        <button
+          id="like-btn"
+          class="group flex items-center gap-2
+                 bg-[#1a1a1a] px-6 py-3 rounded-xl
+                 border border-green-500/40
+                 hover:bg-green-600
+                 hover:border-green-500
+                 transition-all duration-300
+                 active:scale-95">
+
+          <i class="ri-thumb-up-line text-green-400
+                    group-hover:text-white
+                    transition"></i>
+
+          <span class="font-semibold">Like</span>
+        </button>
+
+        <!-- Unlike Button -->
+        <button
+          id="unlike-btn"
+          class="hidden group flex items-center gap-2
+                 bg-[#1a1a1a] px-6 py-3 rounded-xl
+                 border border-red-500/40
+                 hover:bg-red-600
+                 hover:border-red-500
+                 transition-all duration-300
+                 active:scale-95">
+
+          <i class="ri-thumb-down-line text-red-400
+                    group-hover:text-white
+                    transition"></i>
+
+          <span class="font-semibold">Unlike</span>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- TRAILER CARD -->
+<section class="mt-12">
+  <div class="relative w-full h-[420px] rounded-2xl overflow-hidden bg-black">
+
+    <!-- VIDEO -->
+    <div class="w-full h-[420px] bg-black rounded-xl overflow-hidden">
+      <div id="video-container" class="w-full h-full"></div>
+    </div>
+
+
+    <!-- DARK OVERLAY (visual only) -->
+    <div
+      class="absolute inset-0 bg-black/60 z-10 pointer-events-none">
+    </div>
+
+    <!-- TEXT -->
+    <div
+      class="relative z-20 p-6 h-full flex items-end">
+      <h2 class="text-2xl font-bold">
+        Trailer
+      </h2>
+    </div>
+    <!-- <button
+      id="unmute-btn"
+      class="absolute bottom-6 right-6 z-30
+            bg-black/60 hover:bg-black/80
+            px-4 py-2 rounded-full text-sm">
+      🔊 Unmute
+    </button> -->
+
+  </div>
+</section>
+
+
+    <!-- Recommendations -->
+    <section class="mt-14">
+      <h2 class="text-2xl font-bold mb-4">Recommended Movies</h2>
+      <div
+        id="recommendation-container"
+        class="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-6">
+      </div>
+    </section>
+
+  </main>
+
+  
+  <script type="module" src="../js/movie.js" defer></script>
+</body>
+</html>
