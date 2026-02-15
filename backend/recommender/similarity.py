@@ -1,12 +1,13 @@
 import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
+from config import IMDB_PATH, MATRIX_PATH
 
 
 def get_similar_users(user_id, min_similarity=0.1, top_n=10):
 
     # load the matrix
-    df = pd.read_csv('user_item_matrix.csv')
+    df = pd.read_csv(MATRIX_PATH)
 
     # ensure user_id type consistency
     df["user_id"] = df["user_id"].astype(type(user_id))
@@ -20,7 +21,7 @@ def get_similar_users(user_id, min_similarity=0.1, top_n=10):
     user_idx = np.where(user_ids == user_id)[0][0]
     target_vector = movie_matrix[user_idx]
 
-    # If user has no liked movies → similarity meaningless
+    # If user has no liked movies -> similarity meaningless
     if np.sum(target_vector) == 0:
         return []
 

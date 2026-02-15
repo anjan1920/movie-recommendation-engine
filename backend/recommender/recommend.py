@@ -7,7 +7,7 @@ def recommend_movies(user_id, similar_users, top_n=5):
     user_item = pd.read_csv(MATRIX_PATH)
     movies = pd.read_csv(IMDB_PATH)
 
-    # ensure consistent user_id type
+    
     user_item["user_id"] = user_item["user_id"].astype(type(user_id))
 
     if user_id not in user_item["user_id"].values:
@@ -41,7 +41,7 @@ def recommend_movies(user_id, similar_users, top_n=5):
 
     ranked_movies = sorted(movie_scores.items(), key=lambda item: item[1], reverse=True)
 
-    # Convert movie IDs → titles safely
+    # Convert movie IDs -> titles safely
     recommendations = []
     for movie_id, _ in ranked_movies[:top_n]:
         movie_row = movies[movies.index.astype(str) == movie_id]

@@ -401,6 +401,8 @@ def recommend():
         liked_count = len(liked_movies)
 
     print(f"Liked count : {liked_count}")
+    print("User count : ",(df_matrix.shape)[0])
+    user_count = (df_matrix.shape)[0]
 
     # Recommendation decision 
     #cold start
@@ -457,7 +459,7 @@ def recommend():
         print("Recommended titles:", recommended_titles)
 
 
-    elif liked_count < 10:
+    elif liked_count < 10 or user_count < 5: 
         print("Low interaction user ->  genre based recommendation")
         recommended_titles = recommend_by_genre(liked_movies, top_n=10)
 
