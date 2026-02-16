@@ -121,27 +121,64 @@ frontend/
 
 ---
  
-## Setup & Installation
-Recommended Python Version: 3.12+
+🚀 Getting Started
 1️⃣ Clone the Repository
-git clone https://github.com/anjan1920/movie-recommendation-engine
+git clone https://github.com/anjan1920/movie-recommendation-engine.git
 cd movie-recommendation-engine
-2️⃣ Backend Setup (Python + Flask)
-Create Virtual Environment (Recommended)
-python -m venv venv
-Activate:
 
-Windows:
+⚙️ Backend Setup (Python + Flask)
+2️⃣ Create a Virtual Environment (Recommended)
+python -m venv venv
+
+3️⃣ Activate the Virtual Environment
+
+🪟 Windows:
 
 venv\Scripts\activate
-Mac/Linux:
+
+
+🍎 Mac/Linux:
 
 source venv/bin/activate
-Install Dependencies
-If requirements.txt exists:
+
+4️⃣ Install Dependencies
+
+If a requirements.txt file exists:
 
 pip install -r requirements.txt
-If not, install manually
+
+
+If not, install dependencies manually:
+
+pip install flask
+...
+▶️ How to Run the Project
+🔹 Run Backend Server
+
+Navigate to the backend folder:
+
+cd backend
+
+
+Start the server:
+
+python server.py
+
+
+🔹 Run Frontend
+
+Open the project in VS Code.
+
+Navigate to:
+
+frontend/pages
+
+
+Right-click on index.html
+
+Click "Open with Live Server"
+
+The frontend will open in your browser automatically.
 
 
 
