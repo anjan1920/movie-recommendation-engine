@@ -1,43 +1,45 @@
 # 🎬 Movie Recommendation System
 
-A progressive movie recommendation system built using  **Flask, Pandas, NumPy, and Scikit-learn** , implementing a staged personalization strategy from cold-start to collaborative filtering.
+A progressive movie recommendation system built using **Flask, Pandas, NumPy, and Scikit-learn**, implementing a staged personalization strategy from cold-start to collaborative filtering.
 
 ---
 
 ## 🚀 Project Overview
 
-This system provides personalized movie recommendations using a  **3-stage recommendation strategy** :
+This system provides personalized movie recommendations using a **3-stage recommendation strategy**:
 
 1. **Cold Start (No Interaction)**
 2. **Genre-Weighted Recommendation (Low Interaction Users)**
 3. **User-User Collaborative Filtering (Mature Users)**
 
-The recommendation engine improves as user interaction increases.
+The recommendation engine improves dynamically as user interaction increases.
 
 ---
 
 ## ✨ Features
 
-* User-based Collaborative Filtering (Cosine Similarity)
-* Genre-weighted recommendation for sparse interaction
-* Cold-start handling
-* Real-time like/dislike updates
-* Dynamic frontend using HTML + Tailwind CSS
-* YouTube trailer integration
-* Configurable thresholds via `config.py`
-* CSV-based user-item persistence
+* ✅ User-based Collaborative Filtering (Cosine Similarity)
+* ✅ Genre-weighted recommendation for sparse interaction
+* ✅ Cold-start handling
+* ✅ Real-time like/dislike updates
+* ✅ Dynamic frontend using HTML + Tailwind CSS
+* ✅ YouTube trailer integration
+* ✅ Configurable thresholds via `config.py`
+* ✅ CSV-based user-item persistence
 
 ---
 
 ## 🏗️ System Architecture
 
+```
 Frontend (HTML + JS)
-↓
+        ↓
 Flask API Layer
-↓
+        ↓
 Recommendation Engine
-↓
+        ↓
 User-Item Matrix (CSV Storage)
+```
 
 All recommendation logic is handled on the backend.
 
@@ -47,7 +49,7 @@ All recommendation logic is handled on the backend.
 
 ### 🔹 Stage 1 – Cold Start
 
-If the user has 0 liked movies:
+If the user has **0 liked movies**:
 
 * Recommend top-rated movies from selected genre.
 
@@ -55,12 +57,12 @@ If the user has 0 liked movies:
 
 ### 🔹 Stage 2 – Genre-Based Heuristic
 
-If user interaction is low OR total users < 5:
+If user interaction is low **OR** total users < 5:
 
-* Analyze genres of liked movies.
-* Count genre frequency.
-* Score unseen movies based on genre overlap.
-* Recommend highest scored movies.
+* Analyze genres of liked movies
+* Count genre frequency
+* Score unseen movies based on genre overlap
+* Recommend highest scored movies
 
 This avoids unreliable similarity computation in sparse data.
 
@@ -76,7 +78,7 @@ If user has enough interaction and sufficient user base:
 * Aggregate similarity scores
 * Recommend highest scored unseen movies
 
-Cosine similarity formula:
+**Cosine Similarity Formula:**
 
 ```
 cos(A, B) = (A · B) / (|A| × |B|)
@@ -86,7 +88,7 @@ cos(A, B) = (A · B) / (|A| × |B|)
 
 ## 🛠️ Tech Stack
 
-### Backend
+### 🔹 Backend
 
 * Python 3.12+
 * Flask
@@ -96,19 +98,21 @@ cos(A, B) = (A · B) / (|A| × |B|)
 * Scikit-learn
 * Requests
 
-### Frontend
+### 🔹 Frontend
 
 * HTML
 * Tailwind CSS
 * JavaScript
 
-### External API
+### 🔹 External API
 
-* YouTube Data API (for trailer integration)---
-* 
+* YouTube Data API (Trailer Integration)
+
+---
 
 ## 📂 Project Structure
 
+```
 backend/
   ├── server.py
   ├── config.py
@@ -118,71 +122,99 @@ backend/
 frontend/
   ├── pages/
   └── js/
+```
 
 ---
- 
-🚀 Getting Started
-1️⃣ Clone the Repository
+
+# 🚀 Getting Started
+
+## 1️⃣ Clone the Repository
+
+```bash
 git clone https://github.com/anjan1920/movie-recommendation-engine.git
 cd movie-recommendation-engine
+```
 
-⚙️ Backend Setup (Python + Flask)
-2️⃣ Create a Virtual Environment (Recommended)
+---
+
+## ⚙️ Backend Setup (Python + Flask)
+
+### 2️⃣ Create Virtual Environment (Recommended)
+
+```bash
 python -m venv venv
+```
 
-3️⃣ Activate the Virtual Environment
+### 3️⃣ Activate Virtual Environment
 
-🪟 Windows:
+**🪟 Windows**
 
+```bash
 venv\Scripts\activate
+```
 
+**🍎 Mac/Linux**
 
-🍎 Mac/Linux:
-
+```bash
 source venv/bin/activate
+```
 
-4️⃣ Install Dependencies
+### 4️⃣ Install Dependencies
 
-If a requirements.txt file exists:
+If `requirements.txt` exists:
 
+```bash
 pip install -r requirements.txt
+```
 
+If not:
 
-If not, install dependencies manually:
+```bash
+pip install flask pandas numpy scikit-learn flask-cors requests
+```
 
-pip install flask
-...
-▶️ How to Run the Project
-🔹 Run Backend Server
+---
 
-Navigate to the backend folder:
+# ▶️ How to Run the Project
 
+## 🔹 Run Backend Server
+
+Navigate to backend folder:
+
+```bash
 cd backend
-
+```
 
 Start the server:
 
+```bash
 python server.py
+```
 
+Backend runs at:
 
-🔹 Run Frontend
+```
+http://127.0.0.1:8000/
+```
 
-Open the project in VS Code.
+---
 
-Navigate to:
+## 🔹 Run Frontend
 
+1. Open the project in **VS Code**
+2. Navigate to:
+
+```
 frontend/pages
+```
 
+3. Right-click on `index.html`
+4. Click **"Open with Live Server"**
 
-Right-click on index.html
+The frontend will open automatically in your browser.
 
-Click "Open with Live Server"
+---
 
-The frontend will open in your browser automatically.
-
-
-
---
 # 👨‍💻 Developer Note
 
 If you are here to extend, optimize, or build on top of this system:
@@ -198,6 +230,6 @@ It explains:
 * Full setup guide
 * Extension strategies
 
-Understanding the developer guide will help you modify the system safely.
+Understanding the developer guide will help you modify the system safely and efficiently.
 
----
+
