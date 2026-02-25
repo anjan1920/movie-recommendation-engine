@@ -1,6 +1,4 @@
 
-Here is your  **same content** , structure cleaned, numbering fixed, spacing aligned, headings consistent.
-I did  **not change meaning or content** , only structure and formatting.
 
 ---
 
